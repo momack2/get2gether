@@ -1,0 +1,25 @@
+<div class="container">
+<% if (@id and @curr) %>
+  <h3>Get2gethers for: <%= @curr.first_name %> <%= @curr.last_name %></h3>
+
+   <% if @appts.empty? %>
+  		<p>Sorry, <%= @curr.first_name %> doesn't have any Get2gethers right now...</p>
+
+  <% else %>
+  <div>
+  	<ul class="form">
+  		<form action="/appts/book/<%= @curr.id %>" method="get">
+		  <% @appts.each do |appt| %>
+		  	<% if !appt.booked %>
+		  		<li><input type="radio" name="appt_id" value="<%= appt.id %>" />    <%= appt.event_name %>: <%= appt.start_time %> - <%= appt.end_time %></li>
+			<% end %>
+		  <% end %>
+		  <li><input type="submit" class="btn btn-large btn-success" value="Plan it!" /></li>
+  		</form>
+  	</ul>
+  </div>
+  <% end %>
+  
+<% end %>
+</div>
+    

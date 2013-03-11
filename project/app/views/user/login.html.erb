@@ -1,0 +1,15 @@
+<% if (params[:alert]) %>
+  <div class="error">
+  <%= params[:alert] %>
+  </div>
+<% end %>
+
+<ul class="form">
+	<form action="post_login" method="post">
+		<li><input type="text" name="login" value="Login Name" onclick="clickclear(this, 'Login Name')" onblur="clickrecall(this,'Login Name')"></li>
+		<li><input type="password" name="password" value="Password" onclick="clickclear(this, 'Password')" onblur="clickrecall(this,'Password')"></li>
+	  <li><input class="btn btn-large btn-success" type="submit" value="Submit"/></li>
+	</form>
+	<li style="margin-bottom: 2%; margin-top: 3%;">Not a User? <a href="register">Register</a></li>
+</ul>
+

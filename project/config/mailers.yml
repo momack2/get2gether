@@ -1,0 +1,14 @@
+default: &default
+  address:              smtp.gmail.com
+  port:                 587
+  domain:               get2gether.com
+  user_name:            example@get2gether.com
+  password:             MY_PASSWORD
+  authentication:       plain
+  enable_starttls_auto: true
+
+development:
+  <<: *default
+
+production:
+  <<: *default

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for planning a get2gether, <%= @user.first_name %>!</h1>
+    <p>
+      <%= @appt.booker_name %> wants to get2gether with you! <br/>
+      Your get2gether <%= @appt.event_name %> (<%= @appt.description %>) is planned for <%= @appt.start_time %> - <%= @appt.end_time %> on <%= @appt.other %>.
+    </p>
+    <p>
+    	<%= @appt.booker_name %> says: <%= @appt.booker_message %>.
+    </p>
+    <p>
+      To login to the site and manage your get2gethers, just follow this link: <%= @url %>.
+    </p>
+    <p>Thanks for using get2gether and have a great day!</p>
+  </body>
+</html>

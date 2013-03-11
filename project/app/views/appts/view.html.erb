@@ -1,0 +1,33 @@
+
+<% if (@id and @curr) %>
+     <h3>Hi, <%= @curr.first_name %> <%= @curr.last_name %>! Your Get2gethers!</h3>
+  
+     <h5>Share, text, email, or tweet the link to your friends to <em>get together</em>!</h5>
+  
+     <a href="/appts/user/<%=@id%>">www.get2getherplanner/appts/user/<%=@id%></a>
+	 
+	 <br /><br />
+	 
+	 <ul class="form">
+		<% if @appts.empty? %>
+	  		<li>Sorry, you don't have any Get2gethers yet...</li>
+	
+	  	<% else %>
+		 	<% @appts.each do |appt| %>
+		 		<li>
+		 		<% if appt.booked %>
+		 			<b><%= appt.event_name %></b>: <%= appt.start_time %> - <%= appt.end_time %>
+		 			<small><%= appt.booker_name %></small>
+		 			<time><%= appt.booker_message %></time>
+		 		<% else %>
+		 			<b><%= appt.event_name %></b>: <%= appt.start_time %> - <%= appt.end_time %>
+		 			<small>Unbooked</small>
+		 		<% end %>
+		 		</li>
+		 	<% end %>
+	    <% end %>
+	    <li style="margin-bottom: 2%;"><a href="/appts/appt/<%=@id%>">+ Add A Get2gether</a></li>
+	 </ul>
+  
+<% end %>
+    

@@ -1,0 +1,10 @@
+<% if @appt and !@appt.booked %>
+	<h2><%= @appt.event_name %>: <%= @appt.start_time %> - <%= @appt.end_time %></h2>
+	<p><%= @appt.description %></p>
+	<ul class="form">
+		<form action="/appts/post_book/<%= @appt.id %>" method="post">
+			<li><input type="text" name="booker" value="Your Name" onclick="clickclear(this, 'Your Name')" onblur="clickrecall(this,'Your Name')"></li>
+			<li><textarea name="message" onclick="clickclear(this, 'Message')" onblur="clickrecall(this,'Message')">Message</textarea></li>
+		<li><input class="btn btn-large btn-success" type="submit" value="Get Together!"/></li>
+	</form>
+<% end %>

@@ -1,0 +1,28 @@
+<!--
+<ul class="field">
+<form action="post_register" method="post">
+  <li><h3>First Name:</h3> <a><input type="text" name="first"/></a></li>
+  <li>Last Name: <a><input type="text" name="last"/></a></li>
+  <li>Email Address: <a><input type="email" name="email"/></a></li>
+  <li>Google Cal Id: <a><input type="text" name="cal_id"/></a></li>
+  <li>Enter A Login Name: <a><input type="text" name="login"/></a></li>
+  <li>Enter A Password: <a><input type="password" name="password"/></a></li>
+  <li>Retype Password: <a><input type="password" name="password2"/></a></li>
+  <input type="submit" value="Submit"/>
+</form>
+</ul>-->
+
+
+<ul class="form">
+	<form action="post_register" method="post">
+		  <li><input type="text" name="first" value="First Name" onclick="clickclear(this, 'First Name')" onblur="clickrecall(this,'First Name')"></li>
+		  <li><input type="text" name="last" value="Last Name" onclick="clickclear(this, 'Last Name')" onblur="clickrecall(this,'Last Name')"></li>
+		  <li><input type="text" name="email" value="Email Address" onclick="clickclear(this, 'Email Address')" onblur="clickrecall(this,'Email Address')"></li>
+		  <li><input type="text" name="cal_id" value="Google Cal Id" onclick="clickclear(this, 'Google Cal Id')" onblur="clickrecall(this,'Google Cal Id')"></li>
+		  <li><input type="text" name="login" value="Login Name" onclick="clickclear(this, 'Login Name')" onblur="clickrecall(this,'Login Name')"></li>
+		  <li><input type="password" name="password" value="Password" onclick="clickclear(this, 'Password')" onblur="clickrecall(this,'Password')"></li>
+		  <li><input type="password" name="password2" value="Password" onclick="clickclear(this, 'Password')" onblur="clickrecall(this,'Password')"></li>
+		  <li><input class="btn btn-large btn-success" type="submit" value="Submit"/></li>
+	</form>
+</ul>
+
