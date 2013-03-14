@@ -6,16 +6,17 @@
   End Time: <input type="text" name="end"/><br />
   <input type="submit" value="Submit"/>
 </form>-->
-
-<h3>Schedule a new time to <em>get together</em>!</h3>
-
-<ul class="form">
-	<form action="/appts/post_appt" method="get">
-	  <li><input type="text" name="event_name" value="Get2gethr Name" onclick="clickclear(this, 'Get2gether Name')" onblur="clickrecall(this,'Get2gethr Name')"></li>
-	  <li><textarea name="description" onclick="clickclear(this, 'Description')" onblur="clickrecall(this,'Description')">Description</textarea></li>
-	  <li><input type="text" id="datepicker" name="date" value="Date" onclick="clickclear(this, 'Date')" onblur="clickrecall(this,'Date')"></li>
-	  <li><input type="text" id="timepicker" name="start" value="Start Time" onclick="clickclear(this, 'Start Time')" onblur="clickrecall(this,'Start Time')"></li>
-	  <li><input type="text" id="durationpicker" name="end" value="End Time" onclick="clickclear(this, 'End Time')" onblur="clickrecall(this,'End Time')"></li>
-	  <li><input class="btn btn-large btn-success" type="submit" value="Plan Get2gether!"/></li>
-	</form>
-</ul>
+<div class="main">
+	<h3>Schedule a new time to <em>get together</em>!</h3>
+	
+	<ul class="form">
+		<form action="/appts/post_appt" method="get">
+		  <li><input type="text" name="event_name" value="Get2gethr Name" onclick="clickclear(this, 'Get2gethr Name')" onblur="clickrecall(this,'Get2gethr Name')"></li>
+		  <li><textarea name="description" onclick="clickclear(this, 'Description')" onblur="clickrecall(this,'Description')">Description</textarea></li>
+		  <li><input type="text" id="datepicker" name="date" value="Date" onclick="clickclear(this, 'Date')" onblur="clickrecall(this,'Date')"></li>
+		  <li><input type="text" id="timepicker" name="start" value="Start Time" onclick="clickclear(this, 'Start Time')" onblur="clickrecall(this,'Start Time')"></li>
+		  <li><input type="text" id="durationpicker" name="end" value="End Time" onclick="clickclear(this, 'End Time')" onblur="clickrecall(this,'End Time')"></li>
+		  <li><input class="btn btn-large btn-success" type="submit" value="Plan Get2gether!"/></li>
+		</form>
+	</ul>
+</div>

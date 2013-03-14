@@ -1,33 +1,57 @@
 
+<% require 'active_support/all'%>
+
 <% if (@id and @curr) %>
-     <h3>Hi, <%= @curr.first_name %> <%= @curr.last_name %>! Your Get2gethers!</h3>
+	<div class="main">
+     <h3>Hi, <%= @curr.first_name %> <%= @curr.last_name %>! Your Get2gethrs!</h3>
   
      <h5>Share, text, email, or tweet the link to your friends to <em>get together</em>!</h5>
   
-     <a href="/appts/user/<%=@id%>">www.get2getherplanner/appts/user/<%=@id%></a>
+     <h4 class="url form"><a href="/appts/user/<%=@id%>">www.get2getherplanner/appts/user/<%=@id%></a></h4>
 	 
-	 <br /><br />
-	 
-	 <ul class="form">
+	 <ul class="view form">
 		<% if @appts.empty? %>
-	  		<li>Sorry, you don't have any Get2gethers yet...</li>
+	  		<li>Sorry, you don't have any Get2gethrs yet...</li>
 	
 	  	<% else %>
+		 		<li class="instructions"><b>Get2gethr Name</b>: Start time - End time
+		 			<small>
+		 				Friend: 
+		 					<message>message</message>
+		 			</small>
+		 		</li>
 		 	<% @appts.each do |appt| %>
 		 		<li>
-		 		<% if appt.booked %>
-		 			<b><%= appt.event_name %></b>: <%= appt.start_time %> - <%= appt.end_time %>
-		 			<small><%= appt.booker_name %></small>
-		 			<time><%= appt.booker_message %></time>
+		 		<% if appt.other and DateTime.strptime(appt.other, "%m/%d/%Y") >= DateTime.now-1 %>
+			 		<% if appt.booked %>
+			 			<b><%= appt.event_name %></b>: <%= appt.other %> <%= appt.start_time %> - <%= appt.end_time %>
+			 			<small>
+			 				<%= appt.booker_name %>
+			 				<% if appt.booker_message %>: 
+			 					<message><%= appt.booker_message %></message>
+			 				<%end%>
+			 			</small>
+			 		<% else %>
+			 			<b><%= appt.event_name %></b>: <%= appt.other %> <%= appt.start_time %> - <%= appt.end_time %>
+			 			<small class="unbooked">Unbooked</small>
+			 		<% end %>
 		 		<% else %>
-		 			<b><%= appt.event_name %></b>: <%= appt.start_time %> - <%= appt.end_time %>
-		 			<small>Unbooked</small>
+		 			past <%= appt.event_name %>: <%= appt.other %> <%= appt.start_time %> - <%= appt.end_time %>
+			 			<small>
+			 				<%= appt.booker_name %>
+			 				<% if appt.booker_message %>: 
+			 					<message><%= appt.booker_message %></message>
+			 				<%end%>
+			 			</small>
+		 		
+		 		
 		 		<% end %>
 		 		</li>
 		 	<% end %>
 	    <% end %>
 	    <li style="margin-bottom: 2%;"><a href="/appts/appt/<%=@id%>">+ Add A Get2gether</a></li>
 	 </ul>
+	</div>
   
 <% end %>
     

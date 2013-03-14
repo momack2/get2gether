@@ -2,21 +2,24 @@
 <html>
 <head>
   <title><%=@title%></title>
-  <!--%= stylesheet_link_tag    "application", :media => "all" %>-->
+ <!-- <%= stylesheet_link_tag    "application", :media => "all" %>-->
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
  <!-- %= stylesheet_link_tag    "iphone", :media => "all" %>-->
+   <link rel="stylesheet" type="text/css" href="/get2gethr.css" />
+
 
   	<!-- http://www.bootstrapcdn.com/ -->
     <!-- Bootstrap CSS Hosted on the "cloud" -->
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
     
+    
+    <!--date and time pickers-->
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
     <script type="text/javascript" src="/timepicker/jquery.timepicker.js"></script>
   <link rel="stylesheet" type="text/css" href="/timepicker/jquery.timepicker.css" />
-
   <script type="text/javascript" src="/timepicker/lib/base.js"></script>
   <link rel="stylesheet" type="text/css" href="/timepicker/lib/base.css" />
     <script>
@@ -34,13 +37,28 @@
 	    });
 	    
     </script>
-
+    
+    <!--click recall-->
+    <script type="text/javascript">
+	function clickclear(thisfield, defaulttext) {
+		if (thisfield.value == defaulttext) {
+			thisfield.value = "";
+		}
+	}
+	function clickrecall(thisfield, defaulttext) {
+		if (thisfield.value == "") {
+			thisfield.value = defaulttext;
+		}
+	}
+	</script>
+    
+    
     <!-- http://www.google.com/webfonts/ -->
     <!-- Google Web Fonts Hosted on the "cloud" -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
 
-<style>
+    <!--<style>
 
     /* GLOBAL STYLES
     -------------------------------------------------- */
@@ -281,9 +299,10 @@
       }
 
     }
-    </style>
+    </style>-->
 
-    <!--<style type="text/css">
+     <!--styles for iphone.css-->
+     <!--<style type="text/css">
 	    body {
           font-family: 'Lora', serif;
           font-size: 30px;
@@ -308,8 +327,8 @@
      
      <link href='http://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
 
-     
-    <style type="text/css">
+     <!--styles for forms and background-->
+    <!--<style type="text/css">
      	
         .form {
 	        background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/diamond_upholstery.png);
@@ -399,31 +418,21 @@
 			color: red;
 		}
 		
-    </style>   
+    </style>   -->
         
-        <script type="text/javascript">
-	function clickclear(thisfield, defaulttext) {
-		if (thisfield.value == defaulttext) {
-			thisfield.value = "";
-		}
-	}
-	function clickrecall(thisfield, defaulttext) {
-		if (thisfield.value == "") {
-			thisfield.value = defaulttext;
-		}
-	}
-	
-	</script>
+    
 
 </head>
 
 
 <body>
 
+<a href="/user">
 <div id=header>
-	<h1>get2gether</h1>
-	<a href="/user/about">About</a>
+	<h1>get2gethr</h1>
+	<a href="/user/about" class="about">About</a>
 </div>
+</a>
         	
 <!--errors-->
 <% if (params[:alert]) %>

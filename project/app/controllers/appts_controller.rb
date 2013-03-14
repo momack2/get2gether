@@ -6,7 +6,7 @@ class ApptsController < ApplicationController
 		     @id = params[:id]
 			 begin
 			  	@curr = User.find(@id) #throws error if not found
-				for appt in @curr.appts() do
+				for appt in @curr.appts().sort_by(&:other) do
 				  	#meeting = {:id => appt.id, :start_time => appt.start_time, :end_time => appt.end_time, :event_name => appt.event_name, :booker_name => appt.booker_name} 
 				   	@appts << appt
 				end
@@ -79,8 +79,7 @@ class ApptsController < ApplicationController
 		     @id = params[:id]
 			 begin
 			  	@curr = User.find(@id) #throws error if not found
-			  	for appt in @curr.appts() do
-			    	#meeting = {:id => appt.id, :start_time => appt.start_time, :end_time => appt.end_time, :event_name => appt.event_name, :booker_name => appt.booker_name} 
+			  	for appt in @curr.appts().sort_by(&:other) do
 			     	@appts << appt
 			 	end
 				@title = @curr.first_name

@@ -20,17 +20,29 @@
     body {
       padding-bottom: 40px;
       /*color: #5a5a5a;*/
+      background: purple;
       background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/diamond_upholstery.png);
     }
 
-.form {
-	        /*background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/diamond_upholstery.png);*/
+    .form {
+	        background-color: white;
 	        border: 1px solid #DEDEDE;
 	        border-radius: 15px;
 	        margin-left: 5%;
 	        margin-top: 3%;
 	        margin-bottom: 3%;
 	        margin-right: 5%;
+	        color: #5a5a5a;
+        }
+        
+        .url {
+	        list-style-type: none;
+	        margin-left: 20%;
+	        margin-top: 2%;
+	        margin-right: 20%;
+	        text-align: center;
+	        padding-bottom: 5px;
+	        padding-top: 5px;
         }
         
         .form li {
@@ -40,31 +52,56 @@
 	        margin-right: 5%;
         }
         
-        time {
-	        margin-right: 14%;
-	        text-align: right;
+        .instructions {
+	        font-weight: 900; 
+	        font-size: 16px;
+	        padding-bottom: 3px;
+	        border-bottom-width: 1px;
+	        border-bottom: gray;
+	        border-bottom-style: ridge;
+        }
+        
+        .view li {
+	        list-style-type: none;
+	        margin-left: 4%;
+	        margin-top: 3%;
+	        margin-right: 5%;
+	        margin-bottom: 3%
+        }
+        
+        .unbooked {
+	        color:#2d3642;
         }
         
         div.main {
-	        background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/diamond_upholstery.png);
-	        margin-left: 5%;
-	        margin-top: 3%;
-	        margin-bottom: 3%;
-	        margin-right: 5%;
+	        margin-left: 3%;
+	        margin-top: 2%;
+	        margin-bottom: 2%;
+	        margin-right: 3%;
         }
         
         ul li small {
-			color: #369;
+			color: #15A2ED;
 			font: 17px Helvetica;
-			text-align: right;
+			text-align: left;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			overflow: hidden;
 			display: block;
-			width: 23%;
+			width: 33%;
 			float: right;
 			padding: 3px 2%;
 		}
+		
+		small message {
+	        color: gray;
+	        text-align: right;
+	        float: right;
+	        text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+        }
+		
 		div#header h1 {
 			color: #15A2ED;
 			font-family: 'Sofia', cursive;
@@ -81,7 +118,12 @@
 			left: 50%;
 		}
 		
-		div#header a {
+		div#header h1 {
+			text-decoration: none;
+			}
+
+				
+		div#header .about {
 			color: #15A2ED;
 			font-family: 'Sofia', cursive;
 			text-shadow: #2d3642 0 -1px 0;
@@ -165,7 +207,7 @@
     }
 
     .carousel .container {
-      position: relative;
+      /*position: relative;*/
       z-index: 9;
     }
 
@@ -196,6 +238,7 @@
       max-width: 550px;
       padding: 0 20px;
       margin-top: 200px;
+      border-radius: 10px;
     }
     .carousel-caption h1,
     .carousel-caption .lead {
@@ -230,7 +273,8 @@
     ------------------------- */
 
     .featurette-divider {
-      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+      margin: 60px 0; /* Space out the Bootstrap <hr> more */
+      border-bottom-color: gray;
     }
     .featurette {
       padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
