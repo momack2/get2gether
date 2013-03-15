@@ -54,7 +54,7 @@ class ApptsController < ApplicationController
 	    			#	print result.data.id
                     end
                     if (@user.email)
-                    	UserMailer.appt_email(@user, @appt).deliver
+                    	#UserMailer.appt_email(@user, @appt).deliver
                     end
                     if (@user.phone)
                     	#use twilio to text message!
