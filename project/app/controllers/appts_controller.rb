@@ -31,10 +31,10 @@ class ApptsController < ApplicationController
 	    		@appt = Appt.find(params[:appt_id]) #throws error if not found
 	    		@curr = User.find(params[:id]) #throws error if not found
 	    	rescue ActiveRecord::RecordNotFound
-				redirect_to(:action => :user, :alert => 'Please choose an appointment')
+				redirect_to(:action => :user, :alert => 'Please choose a get2gethr')
 			end
 		else
-			redirect_to(:action => :user, :alert => 'Please choose an appointment')
+			redirect_to(:action => :user, :alert => 'Please choose a get2gethr')
 		end
 
 	 end
@@ -58,18 +58,16 @@ class ApptsController < ApplicationController
                     end
                     if (@user.phone)
                     	#use twilio to text message!
-                    end	
-                    
-                         
-			    	redirect_to("/user/index.html", :alert => "Thanks, #{@appt.booker_name}! You successfully planned a get2gether with #{@user.first_name}!")
+                    end	 
+			    	redirect_to("/user/index.html", :alert => "Thanks, #{@appt.booker_name}! You successfully planned a get2gethr with #{@user.first_name}!")
 			    else
-			    	redirect_to(:action => :appt, :alert => 'That is not a valid appointment')
+			    	redirect_to(:action => :book, :alert => 'That is not a valid get2gethr')
 			    end
 			rescue ActiveRecord::RecordNotFound
-				redirect_to(:action => :appt, :alert => 'Please choose an appointment')
+				redirect_to(:action => :book, :alert => 'Please choose a get2gethr')
 			end
 		else
-			redirect_to(:action => :user, :alert => 'Please choose an appointment')
+			redirect_to(:action => :user, :alert => 'Please choose a get2gethr')
 		end
 	 end
 	 
@@ -94,7 +92,7 @@ class ApptsController < ApplicationController
 	 
 	 def appt
 	 	@stylesheet = "socialize"
-        @title = "New Appointment"
+        @title = "New get2gethr"
 	 end
 	 
 	 #if successful, creates new appointment and redirects
@@ -106,13 +104,13 @@ class ApptsController < ApplicationController
 	    		if @appt.save
 			    	redirect_to("/appts/view/#{@user.id}", :id => @user.id)
 			    else
-			    	redirect_to(:action => :appt, :alert => 'That is not a valid appointment')
+			    	redirect_to(:action => :appt, :alert => 'That is not a valid get2gethr')
 			    end
 			rescue ActiveRecord::RecordNotFound
-				redirect_to(:action => :appt, :alert => 'Please log in to create appointments')
+				redirect_to(:action => :appt, :alert => 'Please log in to create a get2gethr')
 			end
 		else
-			redirect_to(:action => :appt, :alert => 'Please login to create appointments')
+			redirect_to(:action => :appt, :alert => 'Please login to create a get2gethr')
 		end
 	 end
 	 
