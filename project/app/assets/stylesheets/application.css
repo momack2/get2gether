@@ -19,8 +19,8 @@
 
     body {
       padding-bottom: 40px;
-      /*color: #5a5a5a;*/
-      background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/diamond_upholstery.png);
+      /*color: #5a5a5a;  diamond_upholstery*/
+      background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/gplay.png);
     }
 
 .form {
@@ -46,7 +46,7 @@
         }
         
         div.main {
-	        background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/diamond_upholstery.png);
+	        background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/gplay.png);
 	        margin-left: 5%;
 	        margin-top: 3%;
 	        margin-bottom: 3%;

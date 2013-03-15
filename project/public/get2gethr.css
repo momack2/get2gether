@@ -21,7 +21,7 @@
       padding-bottom: 40px;
       /*color: #5a5a5a;*/
       background: purple;
-      background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/diamond_upholstery.png);
+      background-image: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/foggy_birds.png);
     }
 
     .form {
@@ -33,6 +33,7 @@
 	        margin-bottom: 3%;
 	        margin-right: 5%;
 	        color: #5a5a5a;
+	        font-family: 'Libre Baskerville', serif;
         }
         
         .url {
@@ -41,8 +42,9 @@
 	        margin-top: 2%;
 	        margin-right: 20%;
 	        text-align: center;
-	        padding-bottom: 5px;
-	        padding-top: 5px;
+	        padding-bottom: 7px;
+	        padding-top: 7px;
+	        
         }
         
         .form li {
@@ -50,6 +52,7 @@
 	        margin-left: 4%;
 	        margin-top: 1%;
 	        margin-right: 5%;
+	        font-family: 'Libre Baskerville', serif;
         }
         
         .instructions {
@@ -66,7 +69,8 @@
 	        margin-left: 4%;
 	        margin-top: 3%;
 	        margin-right: 5%;
-	        margin-bottom: 3%
+	        margin-bottom: 3%;
+	        font-family: 'Libre Baskerville', serif;
         }
         
         .unbooked {
@@ -78,11 +82,12 @@
 	        margin-top: 2%;
 	        margin-bottom: 2%;
 	        margin-right: 3%;
+	        font-family: 'Gabriela', serif;
         }
         
         ul li small {
 			color: #15A2ED;
-			font: 17px Helvetica;
+			font: 17px;
 			text-align: left;
 			text-overflow: ellipsis;
 			white-space: nowrap;
@@ -120,12 +125,8 @@
 			position: absolute;
 			top: 0;
 			left: 50%;
-		}
-		
-		div#header h1 {
 			text-decoration: none;
-			}
-
+		}
 				
 		div#header .about {
 			color: #15A2ED;
@@ -133,15 +134,14 @@
 			text-shadow: #2d3642 0 -1px 0;
 			font-size: 18pt;
 			text-align: right;
-			text-overflow: ellipsis;
 			white-space: nowrap;
 			overflow: hidden;
-			width: 49%;
-			padding: 5px 0 15px 0;
-			margin: 2px 0 0 -24%;
+			width: 10%;
+			padding: 5px 0 5px 0;
+			margin: 2px 0 0 -15%;
 			position: absolute;
 			top: 0;
-			left: 60%;
+			left: 100%;
 		}
 					
 		div#header {

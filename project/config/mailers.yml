@@ -1,9 +1,9 @@
 default: &default
   address:              smtp.gmail.com
   port:                 587
-  domain:               get2gether.com
-  user_name:            example@get2gether.com
-  password:             MY_PASSWORD
+  domain:               yahoo.com
+  user_name:            mica324@yahoo.com
+  password:             Lantana2011
   authentication:       plain
   enable_starttls_auto: true
 

@@ -25,7 +25,8 @@
     <script>
 	    $(function() {
 		    $("#datepicker").datepicker();
-		    $("#timepicker").timepicker({ 'scrollDefaultNow': true });
+		    $("#timepicker").timepicker();
+		    $("#timepicker").timepicker('setTime', new Date());
 		    $("#durationpicker").timepicker({
 			    'minTime': '3:00pm',
 			    'maxTime': '11:30pm',
@@ -57,6 +58,7 @@
     <!-- Google Web Fonts Hosted on the "cloud" -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'>
 
     <!--<style>
 
@@ -326,6 +328,8 @@
      </style>-->
      
      <link href='http://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+
 
      <!--styles for forms and background-->
     <!--<style type="text/css">

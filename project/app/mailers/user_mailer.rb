@@ -3,8 +3,8 @@ class UserMailer < ActionMailer::Base
   
   def appt_email(user, appt)
     @user = user
-    @url  = 'http://www.get2getherbooker.com/user/login'
+    @url  = 'http://www.get2gethr.us/user/login'
     @appt = appt
-    mail(to: user.email, subject: "#{@appt.booker_name} wants to get2gether!")
+    mail(to: @user.email, subject: "#{@appt.booker_name} wants to get2gether!")
   end
 end
